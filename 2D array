@@ -1,0 +1,62 @@
+2D Array
+2D array can be defined as an array of arrays. The 2D array is organized as matrices which can be represented as the collection of rows and columns.
+
+However, 2D arrays are created to implement a relational database look alike data structure. It provides ease of holding bulk of data at once which can be passed to any number of functions wherever required.
+
+How to declare 2D Array
+The syntax of declaring two dimensional array is very much similar to that of a one dimensional array, given as follows.
+
+int arr[max_rows][max_columns];   
+however, It produces the data structure which looks like following.
+
+How do we access data in a 2D array
+Due to the fact that the elements of 2D arrays can be random accessed. Similar to one dimensional arrays, we can access the individual cells in a 2D array by using the indices of the cells. There are two indices attached to a particular cell, one is its row number while the other is its column number.
+
+However, we can store the value stored in any particular cell of a 2D array to some variable x by using the following syntax.
+
+int x = a[i][j];   
+where i and j is the row and column number of the cell respectively.
+
+We can assign each cell of a 2D array to 0 by using the following code:
+
+for ( int i=0; i<n ;i++)  
+{  
+    for (int j=0; j<n; j++)   
+    {  
+        a[i][j] = 0;   
+    }  
+}  
+Initializing 2D Arrays
+We know that, when we declare and initialize one dimensional array in C programming simultaneously, we don't need to specify the size of the array. However this will not work with 2D arrays. We will have to define at least the second dimension of the array.
+
+The syntax to declare and initialize the 2D array is given as follows.
+
+int arr[2][2] = {0,1,2,3};   
+The number of elements that can be present in a 2D array will always be equal to (number of rows * number of columns).
+
+Example : Storing User's data into a 2D array and printing it.
+
+C Example :
+
+#include <stdio.h>  
+void main ()  
+{  
+    int arr[3][3],i,j;   
+    for (i=0;i<3;i++)  
+    {  
+        for (j=0;j<3;j++)  
+        {  
+            printf("Enter a[%d][%d]: ",i,j);              
+            scanf("%d",&arr[i][j]);  
+        }  
+    }  
+    printf("\n printing the elements ....\n");   
+    for(i=0;i<3;i++)  
+    {  
+        printf("\n");  
+        for (j=0;j<3;j++)  
+        {  
+            printf("%d\t",arr[i][j]);  
+        }  
+    }  
+}  
